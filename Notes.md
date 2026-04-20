@@ -28,4 +28,35 @@
 ### 生成SSH密钥
 
 如果你需要通过 SSH 进行 Git 操作，可以生成 SSH 密钥并添加到你的 Git 托管服务（如 GitHub、GitLab 等）上
+***Remark***: SSH 用于安全地连接到 Git 托管服务，无需每次都输入用户名和密码
+
+## Git 工作流程
+
+<div align="center">
+    <img src="./Materials/image.png" alt="Git 工作流程图" />
+</div>
+
+知识点说明：
+
+* **git stash**：暂存目前修改的代码
+* **git pull**：从远程仓库拉取最新的代码到本地，确保本地代码是最新的
+* **git fetch and merge**：从远程仓库获取最新的代码并合并到当前分支
+
+***Remark 1***: git stash 可以让你在不提交当前修改的情况下切换分支或拉取最新代码，避免了冲突和不必要的提交
+
+***Remark 2***: git pull 和 git fetch and merge 的主要区别在于，git pull 会自动将远程代码合并到当前分支，而 git fetch and merge 需要你手动执行合并操作
+
+***Remark 3***: origin 是远程仓库的默认代号，当你在电脑上通过 git clone 下载代码，或者关联一个 GitHub 仓库时，Git 默认会把那个云端仓库命名为 origin
+
+## Git 工作区、暂存区和版本库
+
+* **工作区（Working Directory）**：是你在本地计算机上的项目目录，你在这里进行文件的创建、修改和删除操作
+* **暂存区（Staging Area）**：是一个临时存储区域，它包含了即将被提交到版本库中的文件快照，在提交之前，你可以选择性地将工作区中的修改添加到暂存区，一般存放在 .git 目录下的 index 文件
+* **版本库（Repository）**：版本库包含项目的所有版本历史记录，为隐藏目录 .git
+
+## Git 基本操作
+
+<div align="center">
+    <img src="./Materials/image-1.png" alt="Git 工作流程图" />
+</div>
 
